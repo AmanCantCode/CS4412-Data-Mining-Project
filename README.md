@@ -13,7 +13,7 @@ https://grouplens.org/datasets/movielens/
 - Machine Learning: Scikit-Learn (K-Means, PCA, StandardScaler)
 - Visualization: Matplotlib, Seaborn
 
-##Getting Started
+## Getting Started
 1. Installation:
 First, clone the repository and install the necessary dependencies using the requirements file:
 
