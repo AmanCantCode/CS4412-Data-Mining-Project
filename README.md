@@ -21,6 +21,22 @@ First, clone the repository and install the necessary dependencies using the req
 
     pip install -r requirements.txt
 
+2. Create Data Directory
+Since the data files are excluded from version control (via .gitignore), you will need to manually create a `data/` directory:
+
+    mkdir data
+
+3. Download and Extract Dataset (MovieLens 32M dataset) from:
+https://grouplens.org/datasets/movielens/32m/
+
+Download the file `ml-32m.zip` and extract its contents into the `data/` directory.
+
+The `data/` directory should contain the following CSV files after extraction:
+- `ratings.csv`
+- `movies.csv`
+- `tags.csv`
+- `links.csv`
+
 -------------------------------------------------------------------
 ## Data Mining Pipeline
 
