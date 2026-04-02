@@ -78,7 +78,7 @@ plt.savefig("preprocessing_visuals/feature_correlation_heatmap.png", dpi=300, bb
 plt.close()
 
 # --- FIGURE 7: Rating Distribution ---
-df = pd.read_csv("data/preprocessed_movies_2.csv")
+df = pd.read_csv("data/preprocessed_movies.csv")
 fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5))
 sns.histplot(df['avg_rating'], bins=30, kde=True, ax=ax1, color='teal')
 ax1.set_title('Distribution of Average Ratings')

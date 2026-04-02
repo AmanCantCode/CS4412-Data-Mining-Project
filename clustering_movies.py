@@ -8,11 +8,11 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import os
 
-GRAPH_DIR = "graphs"
+GRAPH_DIR = "movie_graphs"
 os.makedirs(GRAPH_DIR, exist_ok=True)
 
 # 1. Load the NEW Preprocessed Data
-df = pd.read_csv("data/preprocessed_movies_2.csv")
+df = pd.read_csv("data/preprocessed_movies.csv")
 
 # Get actual statistics from original ratings
 original_ratings = pd.read_csv("data/ratings.csv")
@@ -42,6 +42,11 @@ X = df[features]
 
 pca = PCA(n_components=10)
 X_pca = pca.fit_transform(X) 
+
+print("Movie PCA Explained Variance Ratio:")
+print(pca.explained_variance_ratio_)
+print(f"Cumulative variance for first 2 components: {pca.explained_variance_ratio_[:2].sum():.3f}")
+print(f"Cumulative variance for first 10 components: {pca.explained_variance_ratio_.sum():.3f}")
 
 # Apply Silhouette Score to find optimal k
 for k in range(2, 11):
