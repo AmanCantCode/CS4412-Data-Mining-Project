@@ -16,17 +16,18 @@ https://grouplens.org/datasets/movielens/
 -------------------------------------------------------------------
 ## Getting Started
 
-1. Installation:
+### 1. Installation
 First, clone the repository and install the necessary dependencies using the requirements file:
 
     pip install -r requirements.txt
 
-2. Create Data Directory
+### 2. Create Data Directory
 Since the data files are excluded from version control (via .gitignore), you will need to manually create a `data/` directory:
 
     mkdir data
 
-3. Download and Extract Dataset (MovieLens 32M dataset) from:
+### 3. Download and Extract Dataset
+Download the MovieLens 32M dataset from:  
 https://grouplens.org/datasets/movielens/32m/
 
 Download the file `ml-32m.zip` and extract its contents into the `data/` directory.
