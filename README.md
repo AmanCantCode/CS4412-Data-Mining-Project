@@ -89,7 +89,7 @@ All scripts are designed to automatically create the necessary directories and s
 
 | Script | Generated Folder | Contents |
 |--------|------------------|----------|
-| `EDA.py` | `original_eda_graphs/` | Distribution plots after preprocessing |
+| `EDA.py` | `original_eda_graphs/` | Understanding the data before preprocessing |
 | `preprocess_visual.py` | `preprocessing_visuals/` | Distribution plots after preprocessing |
 | `clustering_movies.py` | `movie_graphs/` | PCA scatter plots, elbow curves, rating distributions |
 | `clustering_users.py` | `user_graphs/` | User cluster visualizations, heatmaps |
