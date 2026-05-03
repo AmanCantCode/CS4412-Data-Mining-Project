@@ -64,7 +64,7 @@ Execute the user clustering script to identify user archetypes based on behavior
 
     python clustering_users.py
 
-### Phase 4: Classification & Validation (M3 Expansion)
+### Phase 4: Classification & Validation
 
 #### Movie Decision Tree
 Run the decision tree to validate movie clusters and identify feature importance:
@@ -76,8 +76,41 @@ Run the decision tree to validate user archetypes and identify what separates th
 
     python users_d_tree.py
 
-### Phase 5: Temporal Analysis & Anomaly Detection (M3 Expansion)
+### Phase 5: Temporal Analysis & Anomaly Detection
 
 Run the user behavior analysis script to examine session patterns, rating recency, lifespan, and detect anomalies:
 
     python user_behavior.py
+
+-------------------------------------------------------------------
+## Output and Visualizations
+
+All scripts are designed to automatically create the necessary directories and save visualizations without any manual intervention. As you run each script, the following dedicated folders will be created automatically in the project root:
+
+| Script | Generated Folder | Contents |
+|--------|------------------|----------|
+| `EDA.py` | `original_eda_graphs/` | Distribution plots after preprocessing |
+| `preprocess_visual.py` | `preprocessing_visuals/` | Distribution plots after preprocessing |
+| `clustering_movies.py` | `movie_graphs/` | PCA scatter plots, elbow curves, rating distributions |
+| `clustering_users.py` | `user_graphs/` | User cluster visualizations, heatmaps |
+| `movies_d_tree.py` | `movie_graphs/` | Movie decision tree visualization |
+| `users_d_tree.py` | `user_graphs/` | User decision tree visualization |
+| `user_behavior.py` | `user_lifecycle/` | Session analysis plots, temporal patterns, LOF |
+
+**Documentation:** The `docs/` folder contains all project reports from M1 to M4, including the presentation slides.
+
+No additional setup is required. Each script checks for the existence of its required output directory and creates it automatically if missing. All visualizations are saved at 300 DPI for publication quality.
+
+-------------------------------------------------------------------
+## Script Execution Order
+
+For a complete run of the entire pipeline, execute the scripts in the following order:
+
+1. `python EDA.py`
+2. `python preprocessing.py`
+3. `python preprocess_visual.py`
+4. `python clustering_movies.py`
+5. `python clustering_users.py`
+6. `python movies_d_tree.py`
+7. `python users_d_tree.py`
+8. `python user_behavior.py`

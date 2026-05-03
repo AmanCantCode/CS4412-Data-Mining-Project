@@ -302,7 +302,7 @@ anomaly_features = ['actual_avg_rating', 'actual_rating_std', 'actual_total_rati
 # Get the actual values from user_clusters (already loaded)
 X_anomaly = user_clusters[anomaly_features].fillna(0)
 
-# Run LOF with 10% contamination
+# Run LOF with auto contamination
 lof = LocalOutlierFactor(n_neighbors=20, contamination='auto')
 user_clusters['lof_outlier'] = lof.fit_predict(X_anomaly)
 user_clusters['lof_score'] = lof.negative_outlier_factor_
